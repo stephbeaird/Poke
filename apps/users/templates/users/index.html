@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/css/styles.css' %}" media="screen" title="no title" charset="utf-8">
+    <title>Poke Exam</title>
+</head>
+<body>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>REGISTER</h1>            
+        <form action="/register" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="jflakfjal;kgjal;kj"/>
+            {% csrf_token %}
+            <p>NAME: <input type="text" name="First_Name"></p>
+            <p>ALIAS: <input type="text" name="Alias"></p>
+            <p>EMAIL: <input type="email" name="Email"></p>
+            <p>PASSWORD: <input type="password" name="Password"></p>
+            <p><h4><span style="color:lightcoral">* Password should be at least 8 characters</span></h4></p>
+            <p>CONFIRM PASSWORD: <input type="password" name="Confirm_Password"></p>
+            <p>DATE OF BIRTH: <input type="date" name="birthday"></p>
+            <button type="submit" value="Register">Register</button>
+            <p></p>
+        </form>
+    <h1>LOGIN</h1>            
+        <form action="/main" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="jflakfjal;kgjal;kj"/>
+            {% csrf_token %}
+            <p>EMAIL: <input type="email" name="Email"></p>
+            <p>PASSWORD: <input type="password" name="Password"></p>
+            <button type="submit" value="Login">Login</button>
+        </form>
+</body>
+</html>

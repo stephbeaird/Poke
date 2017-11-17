@@ -1,0 +1,23 @@
+body {
+    width: 1400px;
+    font-family: Oswald;
+    font-size: 14pt;    
+    position: absolute;
+}
+
+h1{
+    position: relative;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+form{
+    position: relative;
+    margin-left: 50px; 
+}
+
+button{
+    padding: 10px;
+    margin-left: 10px;
+}
+

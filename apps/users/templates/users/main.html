@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+    <title>Pokes</title>
+</head>
+<body>
+    <h1>WELCOME</h1>
+    <h2><span style="color:lightcoral">3 people poked you!</span></h2>
+    <div class="poke_history">
+        <p>Michael poked you 72 times!</p>
+        <p>Damon poked you 15 times!</p>
+        <p>Oliver poked you 8 times!</p>  
+    </div>
+    <h3>People you may want to poke:</h3>    
+    <div class="poke_suggest">
+        <p>NAME:</p> 
+        <p>ALIAS:</p> 
+        <p>EMAIL:</p> 
+            <h1><span style="color:lightcoral">I COMPLETELY FORGOT HOW TO WRITE DATABASES AND IM REALLY UPSET ABOUT IT</span></h1>
+        <p>POKE HISTORY:</p> 
+        <p>ACTION:</p>         
+        <button type="submit" name="poke">Poke</button>
+    </div>    
+    <div id="logout">
+        <a href="logout">LOGOUT</a>
+    </div>
+</body>
+</html>
